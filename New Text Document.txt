@@ -1,0 +1,9 @@
+baranglist
+ketgori
+merk
+sales
+subkategori
+supplier
+toko
+faktur
+fakturdetail

@@ -1,0 +1,1587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF48C67B-1E45-4D46-8FCF-E3FEC0791C76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Program_Toko_Rio.My.MyApplication</StartupObject>
+    <RootNamespace>Program_Toko_Rio</RootNamespace>
+    <AssemblyName>KLINIK-29JAN</AssemblyName>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>KLINIK-29JAN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\</OutputPath>
+    <DocumentationFile>KLINIK-29JAN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=6.1.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apotek_new\FormFaktur.designer.vb">
+      <DependentUpon>FormFaktur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apotek_new\FormFaktur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apotek_new\FormFakturManagamen.designer.vb">
+      <DependentUpon>FormFakturManagamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Apotek_new\FormFakturManagamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authorization.Designer.vb">
+      <DependentUpon>authorization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="authorization.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\Bahan Jadi\FormBarangList.designer.vb">
+      <DependentUpon>FormBarangList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\Bahan Jadi\FormBarangList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\Bahan Jadi\FormBarangMentah.designer.vb">
+      <DependentUpon>FormBarangMentah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\Bahan Jadi\FormBarangMentah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\Bahan Jadi\FormBarangHistory.designer.vb">
+      <DependentUpon>FormBarangHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\Bahan Jadi\FormBarangHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\BahanMentah\FormBahanMentahList.designer.vb">
+      <DependentUpon>FormBahanMentahList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\BahanMentah\FormBahanMentahList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\Fising\FormFisingHistory.designer.vb">
+      <DependentUpon>FormFisingHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\Fising\FormFisingHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\BahanMentah\FormBahanMentahHistory.designer.vb">
+      <DependentUpon>FormBahanMentahHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\BahanMentah\FormBahanMentahHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\Fising\FormFisingList.designer.vb">
+      <DependentUpon>FormFisingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\Fising\FormFisingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\FormBarangAdjustment.designer.vb">
+      <DependentUpon>FormBarangAdjustment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\FormBarangAdjustment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\BahanMentah\FormMsBahanMentah.designer.vb">
+      <DependentUpon>FormMsBahanMentah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\BahanMentah\FormMsBahanMentah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\BahanMentah\FormMsBahanMentahSubKategori.designer.vb">
+      <DependentUpon>FormMsBahanMentahSubKategori.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\BahanMentah\FormMsBahanMentahSubKategori.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\FormMsObat.Designer.vb">
+      <DependentUpon>FormMsObat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\FormMsObat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseDistributor.designer.vb">
+      <DependentUpon>FormBrowseDistributor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseDistributor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseFising.designer.vb">
+      <DependentUpon>FormBrowseFising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseFising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseBahanMentah.designer.vb">
+      <DependentUpon>FormBrowseBahanMentah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseBahanMentah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowsePB.designer.vb">
+      <DependentUpon>FormBrowsePB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowsePB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowsePO.designer.vb">
+      <DependentUpon>FormBrowsePO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowsePO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseSupplier.designer.vb">
+      <DependentUpon>FormBrowseSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportDaftarTagih.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportDaftarTagih.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapKomisiSales.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapKomisiSales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapKomisiSalesNew.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapKomisiSalesNew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapLR.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapLR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPB.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPB.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPBFising.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPBFising.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPBMentah.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPBMentah.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPembayaranPiutang.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPembayaranPiutang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPembayaranUtang.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPembayaranUtang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPenagihanArea.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPenagihanArea.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPenagihanToko.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPenagihanToko.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPenjualanArea.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPenjualanArea.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPenjualanToko.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPenjualanToko.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPOFising.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPOFising.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapPOMentah.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapPOMentah.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapProduksi.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapProduksi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapreturBeli.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapreturBeli.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapReturBeliFising.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapReturBeliFising.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapReturJual.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapReturJual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapReturJualNew.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapReturJualNew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapSO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapSO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapTransferStok.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapTransferStok.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRLaporan\CrystalReportLapReturBeliMentah.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportLapReturBeliMentah.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTransaksi\CrystalReportFaktur.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportFaktur.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTransaksi\CrystalReportPB.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportPB.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTransaksi\CrystalReportPBFising.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportPBFising.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTransaksi\CrystalReportPO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportPO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTransaksi\CrystalReportPOFising.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportPOFising.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTransaksi\CrystalReportReturBeli.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportReturBeli.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTransaksi\CrystalReportReturBeliFising.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportReturBeliFising.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTransaksi\CrystalReportReturJual.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportReturJual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTransaksi\CrystalReportSJ.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportSJ.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRTransaksi\CrystalReportSO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportSO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormBackUpDB.Designer.vb">
+      <DependentUpon>FormBackUpDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBackUpDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseBarang.designer.vb">
+      <DependentUpon>FormBrowseBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseSales.designer.vb">
+      <DependentUpon>FormBrowseSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseToko.designer.vb">
+      <DependentUpon>FormBrowseToko.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseToko.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseFaktur.designer.vb">
+      <DependentUpon>FormBrowseFaktur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseFaktur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseSO.designer.vb">
+      <DependentUpon>FormBrowseSO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseSO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseStatusRetur.designer.vb">
+      <DependentUpon>FormBrowseStatusRetur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseStatusRetur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKomisiSales.Designer.vb">
+      <DependentUpon>FormKomisiSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormKomisiSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\Fising\FormMsFisingKomposisi.Designer.vb">
+      <DependentUpon>FormMsFisingKomposisi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\Fising\FormMsFisingKomposisi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsDistributor.Designer.vb">
+      <DependentUpon>FormMsDistributor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsDistributor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsProfile.Designer.vb">
+      <DependentUpon>FormMsProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsReagen.Designer.vb">
+      <DependentUpon>FormMsReagen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsReagen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTRProduksiBarangJadi.Designer.vb">
+      <DependentUpon>FormTRProduksiBarangJadi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTRProduksiBarangJadi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\CRA.Designer.vb">
+      <DependentUpon>CRA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\CRA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\CRDaftarTagih.Designer.vb">
+      <DependentUpon>CRDaftarTagih.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\CRDaftarTagih.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\CRLaporan.Designer.vb">
+      <DependentUpon>CRLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\CRLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\CRPrintTransaksi.Designer.vb">
+      <DependentUpon>CRPrintTransaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\CRPrintTransaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapLabaRugi.Designer.vb">
+      <DependentUpon>FormLapLabaRugi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapLabaRugi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPembayaranPiutang.Designer.vb">
+      <DependentUpon>FormLapPembayaranPiutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPembayaranPiutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPembayaranUtang.Designer.vb">
+      <DependentUpon>FormLapPembayaranUtang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPembayaranUtang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenagihan.Designer.vb">
+      <DependentUpon>FormLapPenagihan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenagihan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenagihan2.Designer.vb">
+      <DependentUpon>FormLapPenagihan2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenagihan2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenerimaan.Designer.vb">
+      <DependentUpon>FormLapPenerimaan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenerimaan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenerimaanFising.Designer.vb">
+      <DependentUpon>FormLapPenerimaanFising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenerimaanFising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenerimaanMentah.Designer.vb">
+      <DependentUpon>FormLapPenerimaanMentah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenerimaanMentah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenjualan.Designer.vb">
+      <DependentUpon>FormLapPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPO.Designer.vb">
+      <DependentUpon>FormLapPO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPOFising.Designer.vb">
+      <DependentUpon>FormLapPOFising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPOFising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapPOMentah.Designer.vb">
+      <DependentUpon>FormLapPOMentah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapPOMentah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapProduksi.Designer.vb">
+      <DependentUpon>FormLapProduksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapProduksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapReturBeli.Designer.vb">
+      <DependentUpon>FormLapReturBeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapReturBeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapReturBeliFising.Designer.vb">
+      <DependentUpon>FormLapReturBeliFising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapReturBeliFising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapReturBeliMentah.Designer.vb">
+      <DependentUpon>FormLapReturBeliMentah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapReturBeliMentah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapReturJual.Designer.vb">
+      <DependentUpon>FormLapReturJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapReturJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapSO.Designer.vb">
+      <DependentUpon>FormLapSO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapSO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormLapTransferStock.Designer.vb">
+      <DependentUpon>FormLapTransferStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormLapTransferStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FormMsJenisPemeriksaan.designer.vb">
+      <DependentUpon>FormMsJenisPemeriksaan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FormMsJenisPemeriksaan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FormMsElektromedik.designer.vb">
+      <DependentUpon>FormMsElektromedik.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FormMsElektromedik.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FormMsFarmasi.designer.vb">
+      <DependentUpon>FormMsFarmasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FormMsFarmasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FormMsPasien.designer.vb">
+      <DependentUpon>FormMsPasien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FormMsPasien.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FormMsDokter.designer.vb">
+      <DependentUpon>FormMsDokter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FormMsDokter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePaymentBahanMentah.designer.vb">
+      <DependentUpon>FormPurchasePaymentBahanMentah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePaymentBahanMentah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePaymentBahanMentahManagamen.designer.vb">
+      <DependentUpon>FormPurchasePaymentBahanMentahManagamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePaymentBahanMentahManagamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePaymentFising.designer.vb">
+      <DependentUpon>FormPurchasePaymentFising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePaymentFising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePaymentFisingManagamen.designer.vb">
+      <DependentUpon>FormPurchasePaymentFisingManagamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePaymentFisingManagamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanFising.Designer.vb">
+      <DependentUpon>FormTrPenerimaanFising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanFising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanBahanMentahM.Designer.vb">
+      <DependentUpon>FormTrPenerimaanBahanMentahM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanBahanMentahM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanFisingM.Designer.vb">
+      <DependentUpon>FormTrPenerimaanFisingM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanFisingM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanBahanMentah.Designer.vb">
+      <DependentUpon>FormTrPenerimaanBahanMentah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanBahanMentah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPOFisingManagement.Designer.vb">
+      <DependentUpon>FormTrPOFisingManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPOFisingManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPOFising.Designer.vb">
+      <DependentUpon>FormTrPOFising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPOFising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPOBahanMentah.Designer.vb">
+      <DependentUpon>FormTrPOBahanMentah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPOBahanMentah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPOBahanMentahManagement.Designer.vb">
+      <DependentUpon>FormTrPOBahanMentahManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPOBahanMentahManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePayment.designer.vb">
+      <DependentUpon>FormPurchasePayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePaymentManagamen.designer.vb">
+      <DependentUpon>FormPurchasePaymentManagamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Pembayaran\FormPurchasePaymentManagamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanBarangM.Designer.vb">
+      <DependentUpon>FormTrPenerimaanBarangM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanBarangM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPO.Designer.vb">
+      <DependentUpon>FormTrPO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelianBahanMentah.Designer.vb">
+      <DependentUpon>FormTrReturPembelianBahanMentah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelianBahanMentah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelianBahanMentahM.Designer.vb">
+      <DependentUpon>FormTrReturPembelianBahanMentahM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelianBahanMentahM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelianFising.Designer.vb">
+      <DependentUpon>FormTrReturPembelianFising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelianFising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelianFisingM.Designer.vb">
+      <DependentUpon>FormTrReturPembelianFisingM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelianFisingM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelian.Designer.vb">
+      <DependentUpon>FormTrReturPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelianM.Designer.vb">
+      <DependentUpon>FormTrReturPembelianM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Retur\FormTrReturPembelianM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\FormBrowseTanggalSuratJalan.designer.vb">
+      <DependentUpon>FormBrowseTanggalSuratJalan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\FormBrowseTanggalSuratJalan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\FormSalesPaymentManagamen.designer.vb">
+      <DependentUpon>FormSalesPaymentManagamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\FormSalesPaymentManagamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\FormSalesPayment.designer.vb">
+      <DependentUpon>FormSalesPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\FormSalesPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\BahanMentah\FormMsBahanMentahTipe.designer.vb">
+      <DependentUpon>FormMsBahanMentahTipe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\BahanMentah\FormMsBahanMentahTipe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\Bahan Jadi\FormMsBarang.Designer.vb">
+      <DependentUpon>FormMsBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\Bahan Jadi\FormMsBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\Fising\FormMsFising.designer.vb">
+      <DependentUpon>FormMsFising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\Fising\FormMsFising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barang\Fising\FormMsJenisFishing.Designer.vb">
+      <DependentUpon>FormMsJenisFishing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barang\Fising\FormMsJenisFishing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsJenisKardus.Designer.vb">
+      <DependentUpon>FormMsJenisKardus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsJenisKardus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsKategori.Designer.vb">
+      <DependentUpon>FormMsKategori.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsKategori.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsKategoriSub.Designer.vb">
+      <DependentUpon>FormMsKategoriSub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsKategoriSub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsMerk.Designer.vb">
+      <DependentUpon>FormMsMerk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsMerk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsMerkTipe.Designer.vb">
+      <DependentUpon>FormMsMerkTipe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsMerkTipe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsEkspedisi.Designer.vb">
+      <DependentUpon>FormMsEkspedisi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsEkspedisi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsArea.Designer.vb">
+      <DependentUpon>FormMsArea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsArea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsProvinsi.Designer.vb">
+      <DependentUpon>FormMsProvinsi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsProvinsi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database.vb" />
+    <Compile Include="FormMain.Designer.vb">
+      <DependentUpon>FormMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsSupplier.Designer.vb">
+      <DependentUpon>FormMsSupplier.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsToko.designer.vb">
+      <DependentUpon>FormMsToko.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsToko.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsUser.Designer.vb">
+      <DependentUpon>FormMsUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsKomposisiBarangJadi.designer.vb">
+      <DependentUpon>FormMsKomposisiBarangJadi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsKomposisiBarangJadi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\FormRetur.designer.vb">
+      <DependentUpon>FormRetur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\FormRetur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\FormReturManagamen.designer.vb">
+      <DependentUpon>FormReturManagamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\FormReturManagamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\FormSO.designer.vb">
+      <DependentUpon>FormSO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\FormSO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjualan\FormSOManagamen.designer.vb">
+      <DependentUpon>FormSOManagamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\FormSOManagamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrFising.Designer.vb">
+      <DependentUpon>FormTrFising.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrFising.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPOManagement.Designer.vb">
+      <DependentUpon>FormTrPOManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\PO\FormTrPOManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrTransferStock.Designer.vb">
+      <DependentUpon>FormTrTransferStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrTransferStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanBarang_.Designer.vb">
+      <DependentUpon>FormTrPenerimaanBarang_.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\Penerimaan\FormTrPenerimaanBarang_.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleRio.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Penjualan\FormSOPendingManagamen.designer.vb">
+      <DependentUpon>FormSOPendingManagamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Penjualan\FormSOPendingManagamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tool_module.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Apotek_new\FormFaktur.resx">
+      <DependentUpon>FormFaktur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apotek_new\FormFakturManagamen.resx">
+      <DependentUpon>FormFakturManagamen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authorization.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>authorization.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\Bahan Jadi\FormBarangList.resx">
+      <DependentUpon>FormBarangList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\Bahan Jadi\FormBarangMentah.resx">
+      <DependentUpon>FormBarangMentah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\Bahan Jadi\FormBarangHistory.resx">
+      <DependentUpon>FormBarangHistory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\BahanMentah\FormBahanMentahList.resx">
+      <DependentUpon>FormBahanMentahList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\Fising\FormFisingHistory.resx">
+      <DependentUpon>FormFisingHistory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\BahanMentah\FormBahanMentahHistory.resx">
+      <DependentUpon>FormBahanMentahHistory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\Fising\FormFisingList.resx">
+      <DependentUpon>FormFisingList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\FormBarangAdjustment.resx">
+      <DependentUpon>FormBarangAdjustment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\BahanMentah\FormMsBahanMentah.resx">
+      <DependentUpon>FormMsBahanMentah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\BahanMentah\FormMsBahanMentahSubKategori.resx">
+      <DependentUpon>FormMsBahanMentahSubKategori.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\FormMsObat.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMsObat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseDistributor.resx">
+      <DependentUpon>FormBrowseDistributor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseFising.resx">
+      <DependentUpon>FormBrowseFising.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseBahanMentah.resx">
+      <DependentUpon>FormBrowseBahanMentah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowsePB.resx">
+      <DependentUpon>FormBrowsePB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowsePO.resx">
+      <DependentUpon>FormBrowsePO.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseSupplier.resx">
+      <DependentUpon>FormBrowseSupplier.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportDaftarTagih.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportDaftarTagih.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapKomisiSales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapKomisiSales.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapKomisiSalesNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapKomisiSalesNew.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapLR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapLR.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPB.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPBFising.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPBFising.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPBMentah.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPBMentah.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPembayaranPiutang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPembayaranPiutang.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPembayaranUtang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPembayaranUtang.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPenagihanArea.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPenagihanArea.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPenagihanToko.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPenagihanToko.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPenjualanArea.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPenjualanArea.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPenjualanToko.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPenjualanToko.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPOFising.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPOFising.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapPOMentah.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapPOMentah.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapProduksi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapProduksi.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapreturBeli.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapreturBeli.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapReturBeliFising.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapReturBeliFising.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapReturJual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapReturJual.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapReturJualNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapReturJualNew.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapSO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapSO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapTransferStok.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapTransferStok.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRLaporan\CrystalReportLapReturBeliMentah.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportLapReturBeliMentah.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTransaksi\CrystalReportFaktur.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportFaktur.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTransaksi\CrystalReportPB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPB.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTransaksi\CrystalReportPBFising.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPBFising.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTransaksi\CrystalReportPO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTransaksi\CrystalReportPOFising.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPOFising.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTransaksi\CrystalReportReturBeli.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportReturBeli.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTransaksi\CrystalReportReturBeliFising.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportReturBeliFising.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTransaksi\CrystalReportReturJual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportReturJual.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTransaksi\CrystalReportSJ.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSJ.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRTransaksi\CrystalReportSO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBackUpDB.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormBackUpDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseBarang.resx">
+      <DependentUpon>FormBrowseBarang.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseSales.resx">
+      <DependentUpon>FormBrowseSales.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseToko.resx">
+      <DependentUpon>FormBrowseToko.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseFaktur.resx">
+      <DependentUpon>FormBrowseFaktur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseSO.resx">
+      <DependentUpon>FormBrowseSO.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseStatusRetur.resx">
+      <DependentUpon>FormBrowseStatusRetur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKomisiSales.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormKomisiSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\Fising\FormMsFisingKomposisi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMsFisingKomposisi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsDistributor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMsDistributor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsProfile.resx">
+      <DependentUpon>FormMsProfile.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsReagen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMsReagen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTRProduksiBarangJadi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTRProduksiBarangJadi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\CRA.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CRA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\CRDaftarTagih.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CRDaftarTagih.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\CRLaporan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CRLaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\CRPrintTransaksi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CRPrintTransaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapLabaRugi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapLabaRugi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPembayaranPiutang.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPembayaranPiutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPembayaranUtang.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPembayaranUtang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPenagihan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPenagihan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPenagihan2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPenagihan2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPenerimaan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPenerimaan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPenerimaanFising.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPenerimaanFising.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPenerimaanMentah.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPenerimaanMentah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPenjualan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPOFising.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPOFising.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapPOMentah.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapPOMentah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapProduksi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapProduksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapReturBeli.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapReturBeli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapReturBeliFising.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapReturBeliFising.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapReturBeliMentah.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapReturBeliMentah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapReturJual.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapReturJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapSO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapSO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormLapTransferStock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLapTransferStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FormMsJenisPemeriksaan.resx">
+      <DependentUpon>FormMsJenisPemeriksaan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FormMsElektromedik.resx">
+      <DependentUpon>FormMsElektromedik.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FormMsFarmasi.resx">
+      <DependentUpon>FormMsFarmasi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FormMsPasien.resx">
+      <DependentUpon>FormMsPasien.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FormMsDokter.resx">
+      <DependentUpon>FormMsDokter.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Pembayaran\FormPurchasePaymentBahanMentah.resx">
+      <DependentUpon>FormPurchasePaymentBahanMentah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Pembayaran\FormPurchasePaymentBahanMentahManagamen.resx">
+      <DependentUpon>FormPurchasePaymentBahanMentahManagamen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Pembayaran\FormPurchasePaymentFising.resx">
+      <DependentUpon>FormPurchasePaymentFising.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Pembayaran\FormPurchasePaymentFisingManagamen.resx">
+      <DependentUpon>FormPurchasePaymentFisingManagamen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Penerimaan\FormTrPenerimaanFising.resx">
+      <DependentUpon>FormTrPenerimaanFising.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Penerimaan\FormTrPenerimaanBahanMentahM.resx">
+      <DependentUpon>FormTrPenerimaanBahanMentahM.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Penerimaan\FormTrPenerimaanFisingM.resx">
+      <DependentUpon>FormTrPenerimaanFisingM.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Penerimaan\FormTrPenerimaanBahanMentah.resx">
+      <DependentUpon>FormTrPenerimaanBahanMentah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\PO\FormTrPOFisingManagement.resx">
+      <DependentUpon>FormTrPOFisingManagement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\PO\FormTrPOFising.resx">
+      <DependentUpon>FormTrPOFising.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\PO\FormTrPOBahanMentah.resx">
+      <DependentUpon>FormTrPOBahanMentah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\PO\FormTrPOBahanMentahManagement.resx">
+      <DependentUpon>FormTrPOBahanMentahManagement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Pembayaran\FormPurchasePayment.resx">
+      <DependentUpon>FormPurchasePayment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Pembayaran\FormPurchasePaymentManagamen.resx">
+      <DependentUpon>FormPurchasePaymentManagamen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Penerimaan\FormTrPenerimaanBarangM.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTrPenerimaanBarangM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\PO\FormTrPO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTrPO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Retur\FormTrReturPembelianBahanMentah.resx">
+      <DependentUpon>FormTrReturPembelianBahanMentah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Retur\FormTrReturPembelianBahanMentahM.resx">
+      <DependentUpon>FormTrReturPembelianBahanMentahM.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Retur\FormTrReturPembelianFising.resx">
+      <DependentUpon>FormTrReturPembelianFising.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Retur\FormTrReturPembelianFisingM.resx">
+      <DependentUpon>FormTrReturPembelianFisingM.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Retur\FormTrReturPembelian.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTrReturPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Retur\FormTrReturPembelianM.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTrReturPembelianM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\FormBrowseTanggalSuratJalan.resx">
+      <DependentUpon>FormBrowseTanggalSuratJalan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\FormSalesPaymentManagamen.resx">
+      <DependentUpon>FormSalesPaymentManagamen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\FormSalesPayment.resx">
+      <DependentUpon>FormSalesPayment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\BahanMentah\FormMsBahanMentahTipe.resx">
+      <DependentUpon>FormMsBahanMentahTipe.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\Bahan Jadi\FormMsBarang.resx">
+      <DependentUpon>FormMsBarang.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\Fising\FormMsFising.resx">
+      <DependentUpon>FormMsFising.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barang\Fising\FormMsJenisFishing.resx">
+      <DependentUpon>FormMsJenisFishing.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsJenisKardus.resx">
+      <DependentUpon>FormMsJenisKardus.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsKategori.resx">
+      <DependentUpon>FormMsKategori.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsKategoriSub.resx">
+      <DependentUpon>FormMsKategoriSub.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsMerk.resx">
+      <DependentUpon>FormMsMerk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsMerkTipe.resx">
+      <DependentUpon>FormMsMerkTipe.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsEkspedisi.resx">
+      <DependentUpon>FormMsEkspedisi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsArea.resx">
+      <DependentUpon>FormMsArea.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsProvinsi.resx">
+      <DependentUpon>FormMsProvinsi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsSupplier.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMsSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsToko.resx">
+      <DependentUpon>FormMsToko.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsUser.resx">
+      <DependentUpon>FormMsUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsKomposisiBarangJadi.resx">
+      <DependentUpon>FormMsKomposisiBarangJadi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\FormRetur.resx">
+      <DependentUpon>FormRetur.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\FormReturManagamen.resx">
+      <DependentUpon>FormReturManagamen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\FormSO.resx">
+      <DependentUpon>FormSO.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\FormSOManagamen.resx">
+      <DependentUpon>FormSOManagamen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrFising.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTrFising.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrTransferStock.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTrTransferStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\PO\FormTrPOManagement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTrPOManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\Penerimaan\FormTrPenerimaanBarang_.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTrPenerimaanBarang_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjualan\FormSOPendingManagamen.resx">
+      <DependentUpon>FormSOPendingManagamen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
